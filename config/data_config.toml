@@ -1,0 +1,89 @@
+[project]
+name = "LNG Cargo Economics & Arbitrage Model"
+phase = "Phase 1B - Multi-Benchmark Market Data & Cross-Basin Spreads"
+base_currency = "USD"
+base_unit = "MMBtu"
+
+[constants]
+mwh_to_mmbtu_hhv = 3.41214
+
+[paths]
+raw_public_dir = "data/raw/public"
+raw_commercial_dir = "data/raw/commercial_imports"
+processed_dir = "data/processed"
+metadata_dir = "data/metadata"
+charts_dir = "outputs/charts"
+
+[sources.henry_hub_spot]
+benchmark = "HENRY_HUB_SPOT"
+instrument_type = "SPOT"
+contract_month = "SPOT"
+source_name = "EIA_VIA_FRED"
+dataset_id = "DHHNGSP"
+url = "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DHHNGSP"
+raw_currency = "USD"
+raw_unit = "MMBtu"
+timezone = "America/Chicago"
+publication_lag_business_days = 1
+methodology = "EIA official daily Henry Hub natural gas spot price assessment (Erath, Louisiana)."
+
+[sources.eurusd_spot]
+filename = "eurusd_spot_raw.xlsx"
+benchmark = "EURUSD"
+instrument_type = "SPOT"
+contract_month = "SPOT"
+source_name = "BLOOMBERG_EXPORT"
+dataset_id = "EURUSD_CURNCY"
+raw_currency = "USD"
+raw_unit = "USD_per_EUR"
+timezone = "America/New_York"
+publication_lag_business_days = 0
+methodology = "Bloomberg EUR/USD spot exchange rate (USD per 1.00 EUR)."
+
+[sources.henry_hub_futures]
+filename = "henry_hub_futures_raw.xlsx"
+benchmark = "HENRY_HUB_FUTURES"
+instrument_type = "FUTURES"
+contract_month = "FRONT_MONTH_GENERIC"
+source_name = "BLOOMBERG_EXPORT"
+dataset_id = "NG1_COMDTY"
+raw_currency = "USD"
+raw_unit = "MMBtu"
+timezone = "America/Chicago"
+publication_lag_business_days = 0
+methodology = "NYMEX Henry Hub Front-Month Futures (NG1 Comdty, roll adjustment: None/Actual)."
+
+[sources.ttf_front_month]
+filename = "ttf_historical.xlsx"
+benchmark = "TTF"
+instrument_type = "FUTURES"
+contract_month = "FRONT_MONTH_GENERIC"
+source_name = "BLOOMBERG_EXPORT"
+dataset_id = "TZT1_COMDTY"
+raw_currency = "EUR"
+raw_unit = "MWh"
+timezone = "Europe/Amsterdam"
+publication_lag_business_days = 0
+methodology = "ICE Endex Dutch TTF Front-Month Futures (TZT1 Comdty, roll adjustment: None/Actual)."
+
+[sources.jkm_front_month]
+filename = "jkm_historical.xlsx"
+benchmark = "JKM"
+instrument_type = "FUTURES"
+contract_month = "FRONT_MONTH_GENERIC"
+source_name = "BLOOMBERG_EXPORT"
+dataset_id = "JKL1_COMDTY"
+raw_currency = "USD"
+raw_unit = "MMBtu"
+timezone = "Asia/Singapore"
+publication_lag_business_days = 0
+methodology = "Platts / ICE JKM Front-Month Futures (JKL1 Comdty, roll adjustment: None/Actual)."
+
+[quality_control]
+allow_negative_prices = false
+allow_zero_prices = false
+min_plausible_price_usd_mmbtu = 0.50
+max_plausible_price_usd_mmbtu = 150.00
+rolling_window_days = 60
+mad_outlier_threshold = 6.0
+max_consecutive_missing_business_days = 5

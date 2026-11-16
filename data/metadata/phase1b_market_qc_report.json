@@ -1,0 +1,198 @@
+{
+  "generated_at_utc": "2026-11-16T16:08:41Z",
+  "eurusd_qc": {
+    "total_rows": 2316,
+    "valid_pass_count": 2316,
+    "missing_value_count": 0,
+    "invalid_fx_count": 0,
+    "duplicate_date_count": 0
+  },
+  "benchmarks_qc": {
+    "HENRY_HUB_FUTURES": {
+      "benchmark": "HENRY_HUB_FUTURES",
+      "dataset_id": "NG1_COMDTY",
+      "total_rows": 2261,
+      "start_date": "2017-12-11",
+      "end_date": "2026-11-16",
+      "valid_pass_count": 2250,
+      "missing_value_count": 11,
+      "duplicate_date_count": 0,
+      "invalid_price_count": 0,
+      "outlier_high_count": 0,
+      "outlier_low_count": 0,
+      "max_consecutive_missing_b_days": 1,
+      "unexpected_frequency_gaps": [],
+      "flagged_outliers_sample": []
+    },
+    "TTF": {
+      "benchmark": "TTF",
+      "dataset_id": "TZT1_COMDTY",
+      "total_rows": 2306,
+      "start_date": "2017-12-08",
+      "end_date": "2026-11-16",
+      "valid_pass_count": 2278,
+      "missing_value_count": 16,
+      "duplicate_date_count": 0,
+      "invalid_price_count": 0,
+      "outlier_high_count": 12,
+      "outlier_low_count": 0,
+      "max_consecutive_missing_b_days": 15,
+      "unexpected_frequency_gaps": [],
+      "flagged_outliers_sample": [
+        {
+          "observation_date": "2026-03-19",
+          "price_usd_mmbtu": 20.993501995814945,
+          "qc_flag": "OUTLIER_HIGH"
+        },
+        {
+          "observation_date": "2018-09-10",
+          "price_usd_mmbtu": 10.018612659504006,
+          "qc_flag": "OUTLIER_HIGH"
+        },
+        {
+          "observation_date": "2018-09-11",
+          "price_usd_mmbtu": 9.92047794052999,
+          "qc_flag": "OUTLIER_HIGH"
+        },
+        {
+          "observation_date": "2018-09-07",
+          "price_usd_mmbtu": 9.59482653115054,
+          "qc_flag": "OUTLIER_HIGH"
+        },
+        {
+          "observation_date": "2018-09-06",
+          "price_usd_mmbtu": 9.477193374246076,
+          "qc_flag": "OUTLIER_HIGH"
+        },
+        {
+          "observation_date": "2018-09-05",
+          "price_usd_mmbtu": 9.325432133499799,
+          "qc_flag": "OUTLIER_HIGH"
+        },
+        {
+          "observation_date": "2018-09-04",
+          "price_usd_mmbtu": 9.168820271149484,
+          "qc_flag": "OUTLIER_HIGH"
+        },
+        {
+          "observation_date": "2020-09-03",
+          "price_usd_mmbtu": 4.69579759329922,
+          "qc_flag": "OUTLIER_HIGH"
+        },
+        {
+          "observation_date": "2020-09-01",
+          "price_usd_mmbtu": 4.668949339710563,
+          "qc_flag": "OUTLIER_HIGH"
+        },
+        {
+          "observation_date": "2020-09-04",
+          "price_usd_mmbtu": 4.62294483813677,
+          "qc_flag": "OUTLIER_HIGH"
+        },
+        {
+          "observation_date": "2020-09-02",
+          "price_usd_mmbtu": 4.559054141975418,
+          "qc_flag": "OUTLIER_HIGH"
+        },
+        {
+          "observation_date": "2020-08-28",
+          "price_usd_mmbtu": 3.8962236895320825,
+          "qc_flag": "OUTLIER_HIGH"
+        }
+      ]
+    },
+    "JKM": {
+      "benchmark": "JKM",
+      "dataset_id": "JKL1_COMDTY",
+      "total_rows": 2255,
+      "start_date": "2017-12-11",
+      "end_date": "2026-11-16",
+      "valid_pass_count": 2234,
+      "missing_value_count": 7,
+      "duplicate_date_count": 0,
+      "invalid_price_count": 0,
+      "outlier_high_count": 14,
+      "outlier_low_count": 0,
+      "max_consecutive_missing_b_days": 1,
+      "unexpected_frequency_gaps": [],
+      "flagged_outliers_sample": [
+        {
+          "observation_date": "2026-03-19",
+          "price_usd_mmbtu": 22.35,
+          "qc_flag": "OUTLIER_HIGH"
+        },
+        {
+          "observation_date": "2026-03-20",
+          "price_usd_mmbtu": 21.705,
+          "qc_flag": "OUTLIER_HIGH"
+        },
+        {
+          "observation_date": "2026-03-03",
+          "price_usd_mmbtu": 21.185,
+          "qc_flag": "OUTLIER_HIGH"
+        },
+        {
+          "observation_date": "2026-03-09",
+          "price_usd_mmbtu": 21.145,
+          "qc_flag": "OUTLIER_HIGH"
+        },
+        {
+          "observation_date": "2026-03-23",
+          "price_usd_mmbtu": 21.0,
+          "qc_flag": "OUTLIER_HIGH"
+        },
+        {
+          "observation_date": "2026-03-30",
+          "price_usd_mmbtu": 20.53,
+          "qc_flag": "OUTLIER_HIGH"
+        },
+        {
+          "observation_date": "2026-03-24",
+          "price_usd_mmbtu": 20.525,
+          "qc_flag": "OUTLIER_HIGH"
+        },
+        {
+          "observation_date": "2026-03-26",
+          "price_usd_mmbtu": 20.495,
+          "qc_flag": "OUTLIER_HIGH"
+        },
+        {
+          "observation_date": "2026-03-27",
+          "price_usd_mmbtu": 20.395,
+          "qc_flag": "OUTLIER_HIGH"
+        },
+        {
+          "observation_date": "2026-03-18",
+          "price_usd_mmbtu": 20.175,
+          "qc_flag": "OUTLIER_HIGH"
+        },
+        {
+          "observation_date": "2026-03-06",
+          "price_usd_mmbtu": 20.08,
+          "qc_flag": "OUTLIER_HIGH"
+        },
+        {
+          "observation_date": "2026-03-05",
+          "price_usd_mmbtu": 19.395,
+          "qc_flag": "OUTLIER_HIGH"
+        },
+        {
+          "observation_date": "2020-09-01",
+          "price_usd_mmbtu": 5.065,
+          "qc_flag": "OUTLIER_HIGH"
+        },
+        {
+          "observation_date": "2020-09-02",
+          "price_usd_mmbtu": 4.925,
+          "qc_flag": "OUTLIER_HIGH"
+        }
+      ]
+    }
+  },
+  "master_panel_summary": {
+    "start_date": "2017-12-11",
+    "end_date": "2026-11-16",
+    "total_business_days": 2331,
+    "complete_three_basin_days": 2229
+  }
+}

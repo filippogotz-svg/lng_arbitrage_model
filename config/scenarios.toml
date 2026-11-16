@@ -1,0 +1,50 @@
+[project]
+phase = "Phase 3B & 11 - Deterministic Stress & Regime Scenarios"
+
+[scenarios.BASE_LATEST_MARKET]
+description = "Latest observed market prices from master_market_panel with baseline freight ($70k/day)"
+hh_shock_usd_mmbtu = 0.0
+ttf_shock_usd_mmbtu = 0.0
+jkm_shock_usd_mmbtu = 0.0
+freight_rate_override_usd_day = 70000.0
+asia_route_id = "NEA_PANAMA"
+
+[scenarios.EU_WINTER_DEMAND_SHOCK]
+description = "Cold snap in Europe: TTF +$6.50/MMBtu, JKM +$3.00/MMBtu, Atlantic freight surges to $145k/day"
+hh_shock_usd_mmbtu = 0.25
+ttf_shock_usd_mmbtu = 6.50
+jkm_shock_usd_mmbtu = 3.00
+freight_rate_override_usd_day = 145000.0
+asia_route_id = "NEA_PANAMA"
+
+[scenarios.ASIAN_DEMAND_SURGE]
+description = "Northeast Asia heatwave/winter restocking: JKM +$6.00/MMBtu, TTF +$2.00/MMBtu, freight $130k/day"
+hh_shock_usd_mmbtu = 0.20
+ttf_shock_usd_mmbtu = 2.00
+jkm_shock_usd_mmbtu = 6.00
+freight_rate_override_usd_day = 130000.0
+asia_route_id = "NEA_PANAMA"
+
+[scenarios.US_SUPPLY_DISRUPTION]
+description = "USGC freeze-off / terminal outage: Henry Hub +$2.50/MMBtu, global benchmarks +$3.50/MMBtu"
+hh_shock_usd_mmbtu = 2.50
+ttf_shock_usd_mmbtu = 3.50
+jkm_shock_usd_mmbtu = 3.50
+freight_rate_override_usd_day = 60000.0
+asia_route_id = "NEA_PANAMA"
+
+[scenarios.GLOBAL_LNG_OVERSUPPLY]
+description = "New liquefaction wave & weak demand: TTF -$4.00/MMBtu, JKM -$4.50/MMBtu, freight collapses to $30k/day"
+hh_shock_usd_mmbtu = -0.30
+ttf_shock_usd_mmbtu = -4.00
+jkm_shock_usd_mmbtu = -4.50
+freight_rate_override_usd_day = 30000.0
+asia_route_id = "NEA_PANAMA"
+
+[scenarios.SHIPPING_PANAMA_DISRUPTION]
+description = "Panama Canal drought / Red Sea rerouting via Cape of Good Hope + freight spike to $180k/day"
+hh_shock_usd_mmbtu = 0.0
+ttf_shock_usd_mmbtu = 1.00
+jkm_shock_usd_mmbtu = 2.50
+freight_rate_override_usd_day = 180000.0
+asia_route_id = "NEA_COGH"

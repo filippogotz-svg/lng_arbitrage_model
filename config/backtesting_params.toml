@@ -1,0 +1,8 @@
+[project]
+phase = "Phase 5 - Historical Backtesting & Cross-Basin Arbitrage Engine"
+
+[backtest_parameters]
+default_freight_rate_usd_day = 70000.0
+min_profit_threshold_usd = 0.0          # Minimum net profit ($) required to trigger arbitrage open flag
+vessel_id = "two_stroke_174k"
+grade_id = "usgc_lean"

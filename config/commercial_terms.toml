@@ -1,0 +1,17 @@
+[project]
+phase = "Phase 3 - Cargo Economics & Sunk vs Marginal Cost Engine"
+
+[commercial_terms]
+spa_feedgas_multiplier = 1.15                # 115% of Henry Hub for USGC FOB SPAs
+fixed_liquefaction_tolling_fee_usd_mmbtu = 2.50  # Sunk contractual capacity fee ($2.50/MMBtu)
+loading_port_charges_usd_mmbtu = 0.05        # Variable USGC terminal loading fees
+unloading_nwe_charges_usd_mmbtu = 0.12       # NWE (Gate/PvG) discharge terminal fees
+unloading_nea_charges_usd_mmbtu = 0.15       # NEA discharge terminal fees
+nwe_regasification_tariff_usd_mmbtu = 0.35   # European regas & grid injection tariff
+nea_regasification_tariff_usd_mmbtu = 0.20   # Asian terminal send-out fees
+panama_canal_transit_cost_usd = 850000.0     # Neopanamax transit tolls + slot auction fees
+suez_canal_transit_cost_usd = 650000.0       # Suez transit fees
+bunker_mgo_price_usd_per_mt = 750.0          # Marine Gas Oil bunker price ($/mt)
+spot_time_charter_rate_usd_per_day = 70000.0 # Baseline spot time charter hire rate ($/day)
+annual_cost_of_capital_pct = 0.065           # 6.5% per annum financing / working capital rate
+payment_term_days = 30                       # Days between feedstock purchase and cargo revenue collection

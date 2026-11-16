@@ -1,0 +1,92 @@
+{
+  "benchmark": "HENRY_HUB",
+  "dataset_id": "DHHNGSP",
+  "total_rows": 7787,
+  "start_date": "1997-01-07",
+  "end_date": "2026-11-11",
+  "valid_pass_count": 5702,
+  "missing_value_count": 2059,
+  "duplicate_date_count": 0,
+  "invalid_price_count": 0,
+  "outlier_high_count": 19,
+  "outlier_low_count": 7,
+  "max_consecutive_missing_b_days": 28,
+  "unexpected_frequency_gaps": [],
+  "flagged_outliers_sample": [
+    {
+      "observation_date": "2026-01-23",
+      "price_usd_mmbtu": 30.72,
+      "qc_flag": "OUTLIER_HIGH"
+    },
+    {
+      "observation_date": "2026-01-26",
+      "price_usd_mmbtu": 25.01,
+      "qc_flag": "OUTLIER_HIGH"
+    },
+    {
+      "observation_date": "2021-02-17",
+      "price_usd_mmbtu": 23.86,
+      "qc_flag": "OUTLIER_HIGH"
+    },
+    {
+      "observation_date": "2026-01-27",
+      "price_usd_mmbtu": 17.19,
+      "qc_flag": "OUTLIER_HIGH"
+    },
+    {
+      "observation_date": "2024-01-12",
+      "price_usd_mmbtu": 13.2,
+      "qc_flag": "OUTLIER_HIGH"
+    },
+    {
+      "observation_date": "2021-02-16",
+      "price_usd_mmbtu": 11.32,
+      "qc_flag": "OUTLIER_HIGH"
+    },
+    {
+      "observation_date": "2025-01-17",
+      "price_usd_mmbtu": 9.86,
+      "qc_flag": "OUTLIER_HIGH"
+    },
+    {
+      "observation_date": "2021-02-18",
+      "price_usd_mmbtu": 8.56,
+      "qc_flag": "OUTLIER_HIGH"
+    },
+    {
+      "observation_date": "2021-02-11",
+      "price_usd_mmbtu": 6.5,
+      "qc_flag": "OUTLIER_HIGH"
+    },
+    {
+      "observation_date": "2007-06-29",
+      "price_usd_mmbtu": 6.4,
+      "qc_flag": "OUTLIER_LOW"
+    },
+    {
+      "observation_date": "2007-07-03",
+      "price_usd_mmbtu": 6.37,
+      "qc_flag": "OUTLIER_LOW"
+    },
+    {
+      "observation_date": "2007-07-05",
+      "price_usd_mmbtu": 6.3,
+      "qc_flag": "OUTLIER_LOW"
+    },
+    {
+      "observation_date": "2007-07-13",
+      "price_usd_mmbtu": 6.27,
+      "qc_flag": "OUTLIER_LOW"
+    },
+    {
+      "observation_date": "2007-07-12",
+      "price_usd_mmbtu": 6.26,
+      "qc_flag": "OUTLIER_LOW"
+    },
+    {
+      "observation_date": "2018-01-02",
+      "price_usd_mmbtu": 6.24,
+      "qc_flag": "OUTLIER_HIGH"
+    }
+  ]
+}

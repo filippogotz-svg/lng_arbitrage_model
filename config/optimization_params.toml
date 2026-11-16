@@ -1,0 +1,8 @@
+[project]
+phase = "Phase 4 - Dynamic Speed Optimization & Slow-Steaming Engine"
+
+[optimization_bounds]
+min_speed_knots = 13.0
+max_speed_knots = 21.0
+speed_step_knots = 0.25
+default_optimization_target = "MAX_DAILY_PROFIT" # Options: "MAX_DAILY_PROFIT", "MIN_UNIT_COST"

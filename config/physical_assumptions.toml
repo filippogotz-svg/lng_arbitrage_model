@@ -1,0 +1,129 @@
+[project]
+phase = "Phase 2 - Physical LNG Value Chain & Thermodynamic Energy Balance"
+default_vessel_profile = "two_stroke_174k"
+default_lng_grade = "usgc_lean"
+default_fuel_deficit_mode = "BURN_FUEL_OIL" # Options: "BURN_FUEL_OIL" or "FORCE_BOG"
+
+[constants]
+mgo_lhv_mmbtu_per_mt = 40.19          # ISO 8217 Marine Gas Oil energy density (MMBtu/mt)
+hours_per_day = 24.0
+
+[lng_grades.usgc_lean]
+description = "Standard US Gulf Coast Lean LNG (Sabine Pass / Cameron / Corpus Christi)"
+density_kg_m3 = 438.0
+mass_hhv_mmbtu_kg = 0.05240           # Yields 22.9512 MMBtu / m3 liquid LNG
+mass_lhv_mmbtu_kg = 0.04728
+methane_mol_pct = 95.2
+nitrogen_mol_pct = 0.4
+
+[lng_grades.rich_associated]
+description = "Rich LNG with higher C2/C3 fractions (Comparison sensitivity grade)"
+density_kg_m3 = 458.0
+mass_hhv_mmbtu_kg = 0.05185           # Yields 23.7473 MMBtu / m3 liquid LNG
+mass_lhv_mmbtu_kg = 0.04682
+methane_mol_pct = 89.5
+nitrogen_mol_pct = 0.3
+
+[terminals]
+physical_liquefaction_loss_fraction = 0.090  # 9.0% physical feedgas consumed in liquefaction trains
+contractual_feedgas_multiplier = 1.150       # Standard 115% Henry Hub SPA billing multiplier
+loading_duration_days = 1.25                 # Port berth, cooldown, and loading time at USGC
+unloading_duration_days = 1.25               # Port berth and discharge time at receiving terminal
+nwe_regasification_loss_fraction = 0.008     # 0.8% physical fuel/loss at European regas terminal
+nea_regasification_loss_fraction = 0.005     # 0.5% physical fuel/loss at Asian regas terminal
+
+[vessels.two_stroke_174k]
+name = "174,000 m3 Two-Stroke (ME-GI / X-DF) with Partial Reliquefaction"
+propulsion_type = "TWO_STROKE_SLOW_SPEED"
+nominal_capacity_m3 = 174000.0
+max_filling_limit_pct = 0.985
+arrival_heel_pct = 0.015
+natural_bor_laden_pct_per_day = 0.00085      # 0.085% / day
+natural_bor_ballast_pct_per_day = 0.00060    # 0.060% / day
+design_speed_laden_knots = 19.5
+design_speed_ballast_knots = 19.5
+propulsion_energy_laden_mmbtu_per_day = 4150.0   # ~103 mt/day fuel oil equivalent at 19.5 kn
+propulsion_energy_ballast_mmbtu_per_day = 3650.0 # ~91 mt/day fuel oil equivalent at 19.5 kn
+pilot_fuel_fraction = 0.020                      # 2.0% mandatory liquid MGO pilot fuel
+reliquefaction_fraction = 0.75                   # 75% of excess BOG condensed back to tanks
+reliq_power_mgo_mt_per_mmbtu = 0.0018            # Auxiliary MGO burned per MMBtu reliquefied
+
+[vessels.tfde_160k]
+name = "160,000 m3 TFDE (Tri-Fuel Diesel Electric)"
+propulsion_type = "TFDE_MEDIUM_SPEED"
+nominal_capacity_m3 = 160000.0
+max_filling_limit_pct = 0.985
+arrival_heel_pct = 0.015
+natural_bor_laden_pct_per_day = 0.00105      # 0.105% / day
+natural_bor_ballast_pct_per_day = 0.00075    # 0.075% / day
+design_speed_laden_knots = 19.5
+design_speed_ballast_knots = 19.5
+propulsion_energy_laden_mmbtu_per_day = 5300.0   # ~132 mt/day equivalent at 19.5 kn
+propulsion_energy_ballast_mmbtu_per_day = 4650.0
+pilot_fuel_fraction = 0.015
+reliquefaction_fraction = 0.0                    # No reliquefaction; excess BOG burned in GCU
+reliq_power_mgo_mt_per_mmbtu = 0.0
+
+[vessels.steam_145k]
+name = "145,000 m3 Legacy Steam Turbine"
+propulsion_type = "STEAM_TURBINE"
+nominal_capacity_m3 = 145000.0
+max_filling_limit_pct = 0.985
+arrival_heel_pct = 0.015
+natural_bor_laden_pct_per_day = 0.00150      # 0.150% / day
+natural_bor_ballast_pct_per_day = 0.00105    # 0.105% / day
+design_speed_laden_knots = 19.0
+design_speed_ballast_knots = 19.0
+propulsion_energy_laden_mmbtu_per_day = 7200.0   # ~179 mt/day equivalent at 19.0 kn
+propulsion_energy_ballast_mmbtu_per_day = 6300.0
+pilot_fuel_fraction = 0.0
+reliquefaction_fraction = 0.0
+reliq_power_mgo_mt_per_mmbtu = 0.0
+
+[routes.NWE_DIRECT]
+destination_region = "NWE"
+route_name = "USGC (Sabine Pass) to NWE (Gate Rotterdam) Direct Atlantic"
+distance_laden_nm = 4850.0
+distance_ballast_nm = 4850.0
+canal_transit_days_laden = 0.0
+canal_transit_days_ballast = 0.0
+weather_port_buffer_days_laden = 0.75
+weather_port_buffer_days_ballast = 0.50
+requires_panama = false
+requires_suez = false
+
+[routes.NEA_PANAMA]
+destination_region = "NEA"
+route_name = "USGC (Sabine Pass) to NEA (Futtsu Tokyo Bay) via Panama Canal"
+distance_laden_nm = 9950.0
+distance_ballast_nm = 9950.0
+canal_transit_days_laden = 1.50
+canal_transit_days_ballast = 1.50
+weather_port_buffer_days_laden = 1.00
+weather_port_buffer_days_ballast = 0.75
+requires_panama = true
+requires_suez = false
+
+[routes.NEA_COGH]
+destination_region = "NEA"
+route_name = "USGC (Sabine Pass) to NEA (Futtsu Tokyo Bay) via Cape of Good Hope"
+distance_laden_nm = 15600.0
+distance_ballast_nm = 15600.0
+canal_transit_days_laden = 0.0
+canal_transit_days_ballast = 0.0
+weather_port_buffer_days_laden = 1.50
+weather_port_buffer_days_ballast = 1.25
+requires_panama = false
+requires_suez = false
+
+[routes.NEA_SUEZ]
+destination_region = "NEA"
+route_name = "USGC (Sabine Pass) to NEA (Futtsu Tokyo Bay) via Suez Canal"
+distance_laden_nm = 14450.0
+distance_ballast_nm = 14450.0
+canal_transit_days_laden = 1.25
+canal_transit_days_ballast = 1.25
+weather_port_buffer_days_laden = 1.25
+weather_port_buffer_days_ballast = 1.00
+requires_panama = false
+requires_suez = true
