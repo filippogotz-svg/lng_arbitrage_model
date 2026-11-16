@@ -71,7 +71,6 @@ lng_arbitrage_model/
     ├── tables/                     # Generated CSV matrices and backtest tables
     └── charts/                     # Generated diagnostic PNG charts
 
----
 
 ## How to Run It
 
@@ -112,4 +111,4 @@ $env:PYTHONPATH="."; .venv\Scripts\python.exe src/backtesting/historical_engine.
 $env:PYTHONPATH="."; .venv\Scripts\python.exe src/risk/regime_analytics.py
 ```
 
-All generated CSV tables and diagnostic PNG charts are exported automatically to `outputs/tables/` and `outputs/charts/`. 
+All generated CSV tables and diagnostic PNG charts are exported automatically to `outputs/tables/` and `outputs/charts/`.
