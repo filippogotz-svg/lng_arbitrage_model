@@ -75,6 +75,7 @@ lng_arbitrage_model/
 ## How to Run It
 
 ### 1. Environment Setup
+
 Clone the repository, create a virtual environment, and install the core dependencies:
 
 ```powershell
@@ -83,9 +84,10 @@ python -m venv .venv
 pip install pandas numpy matplotlib openpyxl pyarrow requests pytest
 ```
 
-*(Make sure the raw Bloomberg Excel exports are placed inside `data/raw/commercial/` as mapped in `config/data_config.toml`.)*
+> **Note on Market Data:** Place the raw Bloomberg Excel exports inside `data/raw/commercial/` as mapped in `config/data_config.toml` (excluded from version control via `.gitignore` for data licensing compliance).
 
 ### 2. Verify the Test Suite
+
 Run all 16 unit tests to confirm thermodynamic energy conservation, cost taxonomy separation, speed optimization, and tail-risk calculations:
 
 ```powershell
@@ -93,6 +95,7 @@ $env:PYTHONPATH="."; .venv\Scripts\python.exe -m pytest -p no:cacheprovider -v
 ```
 
 ### 3. Run the Analytical Pipeline
+
 Execute the modules in sequence from the project root to build the market panel, run the physical engine, price cargoes, and generate the 2017–2026 historical backtest:
 
 ```powershell
